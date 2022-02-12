@@ -1,0 +1,13 @@
+# my-first-pod.yaml
+apiVersion: v1 # 目前 Kubernetes 中該元件的版本號
+kind: Pod
+metadata:
+  name: my-pod # 指定 pod 名稱
+  labels:  # labels 分群用途
+    app: webserver
+spec:  # 定義 container
+  containers:
+  - name: pod-demo
+    image: giorann4056/docker-demo-nginx
+    ports:
+    - containerPort: 3000
